@@ -18,6 +18,7 @@ namespace ProjetoModeloDDD.Infra.Data.Context
         }
 
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -37,6 +38,10 @@ namespace ProjetoModeloDDD.Infra.Data.Context
 
             //Aplicar as configurações na criação da tabela de cliente
             modelBuilder.Configurations.Add(new ClienteConfiguration());
+
+            //Aplicar as configurações na criação da tabela de produto
+            modelBuilder.Configurations.Add(new ProdutoConfiguration());
+
 
             base.OnModelCreating(modelBuilder);
         }
