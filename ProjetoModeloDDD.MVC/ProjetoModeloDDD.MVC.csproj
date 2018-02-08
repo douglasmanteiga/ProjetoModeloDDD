@@ -222,6 +222,10 @@
       <Project>{47827774-147b-4163-b2bb-768b0018b7aa}</Project>
       <Name>ProjetoModeloDDD.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProjetoModeloDDD.Infra.Data\ProjetoModeloDDD.Infra.Data.csproj">
+      <Project>{8122fdd0-1474-4689-b6d8-a26867d06937}</Project>
+      <Name>ProjetoModeloDDD.Infra.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

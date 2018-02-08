@@ -1,4 +1,9 @@
-﻿using System;
+﻿using AutoMapper;
+using ProjetoModeloDDD.Domain.Entities;
+using ProjetoModeloDDD.Domain.Interfaces;
+using ProjetoModeloDDD.Infra.Data.Repositories;
+using ProjetoModeloDDD.MVC.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +13,14 @@ namespace ProjetoModeloDDD.MVC.Controllers
 {
     public class ClientesController : Controller
     {
-        //private readonly ClienteRepo
+        private readonly ClienteRepository _clienteRepository = new ClienteRepository();
+
         // GET: Clientes
         public ActionResult Index()
         {
-            return View();
+            //Transforma todos os Cliente (Domain.Entities) para ClienteViewModel (ViewModels.ClienteViewModel)
+            var clienteViewModel = Mapper.Map<IEnumerable<Cliente>, IEnumerable<ClienteViewModel>>(_clienteRepository.GetAll());
+            return View(clienteViewModel);
         }
 
         // GET: Clientes/Details/5

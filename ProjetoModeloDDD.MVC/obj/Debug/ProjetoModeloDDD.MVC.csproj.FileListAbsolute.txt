@@ -108,3 +108,7 @@ C:\Users\dmanteiga\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.MVC\bin\Newton
 C:\Users\dmanteiga\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.MVC\obj\Debug\ProjetoModeloDDD.MVC.csprojResolveAssemblyReference.cache
 C:\Users\dmanteiga\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.MVC\obj\Debug\ProjetoModeloDDD.MVC.dll
 C:\Users\dmanteiga\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.MVC\obj\Debug\ProjetoModeloDDD.MVC.pdb
+C:\Users\dmanteiga\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.MVC\bin\ProjetoModeloDDD.Infra.Data.dll
+C:\Users\dmanteiga\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.MVC\bin\EntityFramework.dll
+C:\Users\dmanteiga\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.MVC\bin\ProjetoModeloDDD.Infra.Data.pdb
+C:\Users\dmanteiga\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.MVC\bin\EntityFramework.xml
