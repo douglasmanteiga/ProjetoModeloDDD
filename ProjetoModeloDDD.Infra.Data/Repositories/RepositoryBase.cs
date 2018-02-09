@@ -39,7 +39,7 @@ namespace ProjetoModeloDDD.Infra.Data.Repositories
 
         public void Dispose()
         {
-            db.Dispose();
+            throw new NotImplementedException();
         }
     }
 }

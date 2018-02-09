@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using ProjetoModeloDDD.Application.Interface;
 using ProjetoModeloDDD.Domain.Entities;
 using ProjetoModeloDDD.Domain.Interfaces;
-using ProjetoModeloDDD.Infra.Data.Repositories;
 using ProjetoModeloDDD.MVC.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -13,20 +13,33 @@ namespace ProjetoModeloDDD.MVC.Controllers
 {
     public class ClientesController : Controller
     {
-        private readonly ClienteRepository _clienteRepository = new ClienteRepository();
+        private readonly IClienteAppService _clienteAppService;
+
+        public ClientesController(IClienteAppService clienteAppService)
+        {
+            _clienteAppService = clienteAppService;
+        }
 
         // GET: Clientes
         public ActionResult Index()
         {
             //Transforma todos os Cliente (Domain.Entities) para ClienteViewModel (ViewModels.ClienteViewModel)
-            var clienteViewModel = Mapper.Map<IEnumerable<Cliente>, IEnumerable<ClienteViewModel>>(_clienteRepository.GetAll());
+            var clienteViewModel = Mapper.Map<IEnumerable<Cliente>, IEnumerable<ClienteViewModel>>(_clienteAppService.GetAll());
+            return View(clienteViewModel);
+        }
+
+        public ActionResult Especiais()
+        {
+            var clienteViewModel = Mapper.Map<IEnumerable<Cliente>, IEnumerable<ClienteViewModel>>(_clienteAppService.ObterClientesEspeciais(_clienteAppService.GetAll()));
             return View(clienteViewModel);
         }
 
         // GET: Clientes/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var cliente = _clienteAppService.GetById(id);
+            var clienteViewModel = Mapper.Map<Cliente, IEnumerable<ClienteViewModel>>(cliente);
+            return View(clienteViewModel);
         }
 
         // GET: Clientes/Create
@@ -37,13 +50,20 @@ namespace ProjetoModeloDDD.MVC.Controllers
 
         // POST: Clientes/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(ClienteViewModel cliente)
         {
             try
             {
-                // TODO: Add insert logic here
+                if(ModelState.IsValid)
+                {
+                    var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(cliente);
+                    _clienteAppService.Add(clienteDomain);
 
-                return RedirectToAction("Index");
+                    return RedirectToAction("Index");
+                }
+
+                return View(cliente);
             }
             catch
             {
@@ -54,18 +74,25 @@ namespace ProjetoModeloDDD.MVC.Controllers
         // GET: Clientes/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var cliente = _clienteAppService.GetById(id);
+            var clienteViewModel = Mapper.Map<Cliente, IEnumerable<ClienteViewModel>>(cliente);
+            return View(clienteViewModel);
         }
 
         // POST: Clientes/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(ClienteViewModel cliente)
         {
             try
             {
-                // TODO: Add update logic here
+                //if(ModelState.IsValid)
+                //{
+                //    var clienteViewModel = Mapper.Map<Cliente, IEnumerable<Cliente>(cliente);
 
-                return RedirectToAction("Index");
+                //}
+                
+                return View("");
+
             }
             catch
             {
