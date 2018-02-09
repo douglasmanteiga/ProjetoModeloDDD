@@ -20,7 +20,7 @@ namespace ProjetoModeloDDD.Application
             _clienteService = clienteService;
         }
 
-        public IEnumerable<Cliente> ObterClientesEspeciais(IEnumerable<Cliente> clientes)
+        public IEnumerable<Cliente> ObterClientesEspeciais()
         {
             return _clienteService.ObterClientesEspeciais(_clienteService.GetAll());
         }

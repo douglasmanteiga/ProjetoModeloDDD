@@ -15,6 +15,10 @@ namespace ProjetoModeloDDD.MVC.Controllers
     {
         private readonly IClienteAppService _clienteAppService;
 
+        //O controller de Cliente espera no construtor um objeto IClienteAppService
+        //Precisamos injetar esse parâmetro no construor através de um container de injeção de dependência (existem vários no caso utilizei o Ninject)
+        //Para instalar utilize o Packege Manger Consolor selecionando o Projeto MVC. Digite o seguinte comando: Install-Package Ninject.MVC5
+        //Injeção de dependência
         public ClientesController(IClienteAppService clienteAppService)
         {
             _clienteAppService = clienteAppService;
@@ -30,7 +34,7 @@ namespace ProjetoModeloDDD.MVC.Controllers
 
         public ActionResult Especiais()
         {
-            var clienteViewModel = Mapper.Map<IEnumerable<Cliente>, IEnumerable<ClienteViewModel>>(_clienteAppService.ObterClientesEspeciais(_clienteAppService.GetAll()));
+            var clienteViewModel = Mapper.Map<IEnumerable<Cliente>, IEnumerable<ClienteViewModel>>(_clienteAppService.ObterClientesEspeciais());
             return View(clienteViewModel);
         }
 
@@ -55,7 +59,7 @@ namespace ProjetoModeloDDD.MVC.Controllers
         {
             try
             {
-                if(ModelState.IsValid)
+                if (ModelState.IsValid)
                 {
                     var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(cliente);
                     _clienteAppService.Add(clienteDomain);
@@ -83,43 +87,38 @@ namespace ProjetoModeloDDD.MVC.Controllers
         [HttpPost]
         public ActionResult Edit(ClienteViewModel cliente)
         {
-            try
+            if (ModelState.IsValid)
             {
-                //if(ModelState.IsValid)
-                //{
-                //    var clienteViewModel = Mapper.Map<Cliente, IEnumerable<Cliente>(cliente);
+                var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(cliente);
+                _clienteAppService.Update(clienteDomain);
 
-                //}
-                
-                return View("");
+                return RedirectToAction("Index");
+            }
 
-            }
-            catch
-            {
-                return View();
-            }
+            return View(cliente);
+
         }
 
         // GET: Clientes/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var cliente = _clienteAppService.GetById(id);
+            var clienteViewModel = Mapper.Map<Cliente, IEnumerable<ClienteViewModel>>(cliente);
+
+            return View(clienteViewModel);
         }
 
         // POST: Clientes/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        //Utilizando o atributo ActionName(“Delete”) faz que o roteamento do site aceite o método DeleteConfirmed como Delete 
+        //quando uma URL que inclua o /Delete/ for acionada via Post.
+        [HttpPost, ActionName("Delete")] 
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
+            var cliente = _clienteAppService.GetById(id);
+            _clienteAppService.Remove(cliente);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Index");
         }
     }
 }
