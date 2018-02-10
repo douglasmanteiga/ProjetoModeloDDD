@@ -42,7 +42,7 @@ namespace ProjetoModeloDDD.MVC.Controllers
         public ActionResult Details(int id)
         {
             var cliente = _clienteAppService.GetById(id);
-            var clienteViewModel = Mapper.Map<Cliente, IEnumerable<ClienteViewModel>>(cliente);
+            var clienteViewModel = Mapper.Map<Cliente, ClienteViewModel>(cliente);
             return View(clienteViewModel);
         }
 
@@ -79,7 +79,7 @@ namespace ProjetoModeloDDD.MVC.Controllers
         public ActionResult Edit(int id)
         {
             var cliente = _clienteAppService.GetById(id);
-            var clienteViewModel = Mapper.Map<Cliente, IEnumerable<ClienteViewModel>>(cliente);
+            var clienteViewModel = Mapper.Map<Cliente, ClienteViewModel>(cliente);
             return View(clienteViewModel);
         }
 
@@ -103,7 +103,7 @@ namespace ProjetoModeloDDD.MVC.Controllers
         public ActionResult Delete(int id)
         {
             var cliente = _clienteAppService.GetById(id);
-            var clienteViewModel = Mapper.Map<Cliente, IEnumerable<ClienteViewModel>>(cliente);
+            var clienteViewModel = Mapper.Map<Cliente, ClienteViewModel>(cliente);
 
             return View(clienteViewModel);
         }

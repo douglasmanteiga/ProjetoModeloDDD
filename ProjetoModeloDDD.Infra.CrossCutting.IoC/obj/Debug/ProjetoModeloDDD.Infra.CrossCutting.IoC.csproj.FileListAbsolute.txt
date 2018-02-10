@@ -1,0 +1,15 @@
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\bin\Debug\ProjetoModeloDDD.Infra.CrossCutting.IoC.dll
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\bin\Debug\ProjetoModeloDDD.Infra.CrossCutting.IoC.pdb
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\bin\Debug\ProjetoModeloDDD.Application.dll
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\bin\Debug\ProjetoModeloDDD.Domain.dll
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\bin\Debug\ProjetoModeloDDD.Infra.Data.dll
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\bin\Debug\SimpleInjector.dll
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\bin\Debug\EntityFramework.dll
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\bin\Debug\ProjetoModeloDDD.Application.pdb
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\bin\Debug\ProjetoModeloDDD.Domain.pdb
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\bin\Debug\ProjetoModeloDDD.Infra.Data.pdb
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\bin\Debug\SimpleInjector.xml
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\bin\Debug\EntityFramework.xml
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\obj\Debug\ProjetoModeloDDD.Infra.CrossCutting.IoC.csprojResolveAssemblyReference.cache
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\obj\Debug\ProjetoModeloDDD.Infra.CrossCutting.IoC.dll
+C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Infra.CrossCutting.IoC\obj\Debug\ProjetoModeloDDD.Infra.CrossCutting.IoC.pdb

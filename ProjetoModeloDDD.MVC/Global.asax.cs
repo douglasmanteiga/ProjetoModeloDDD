@@ -1,4 +1,5 @@
-﻿using ProjetoModeloDDD.MVC.AutoMapper;
+﻿using ProjetoModeloDDD.MVC.App_Start;
+using ProjetoModeloDDD.MVC.AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,14 @@ namespace ProjetoModeloDDD.MVC
     {
         protected void Application_Start()
         {
+            
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //Inicializa a injeção de dependência
+            SimpleInjectorInitializer.Initialize();
 
             // Configurando o AutoMapper para registrar os profiles
             // de mapeamento durante a inicialização da aplicação.

@@ -81,20 +81,16 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Ninject, Version=3.3.3.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.3.3.3\lib\net45\Ninject.dll</HintPath>
+    <Reference Include="SimpleInjector, Version=4.0.12.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.0.12\lib\net45\SimpleInjector.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Ninject.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.Web.Common.3.3.0\lib\net45\Ninject.Web.Common.dll</HintPath>
+    <Reference Include="SimpleInjector.Integration.Web, Version=4.0.12.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.Web.4.0.12\lib\net40\SimpleInjector.Integration.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Ninject.Web.Common.WebHost, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.Web.Common.WebHost.3.3.0\lib\net45\Ninject.Web.Common.WebHost.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Ninject.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.MVC5.3.3.0\lib\net45\Ninject.Web.Mvc.dll</HintPath>
+    <Reference Include="SimpleInjector.Integration.Web.Mvc, Version=4.0.12.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.4.0.12\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -169,6 +165,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
     <Compile Include="AutoMapper\AutoMapperConfig.cs" />
     <Compile Include="AutoMapper\DomainToViewModelMappingProfile.cs" />
     <Compile Include="AutoMapper\ViewModelToDomainMappingProfile.cs" />
@@ -246,6 +243,10 @@
     <ProjectReference Include="..\ProjetoModeloDDD.Domain\ProjetoModeloDDD.Domain.csproj">
       <Project>{47827774-147b-4163-b2bb-768b0018b7aa}</Project>
       <Name>ProjetoModeloDDD.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoModeloDDD.Infra.CrossCutting.IoC\ProjetoModeloDDD.Infra.CrossCutting.IoC.csproj">
+      <Project>{4BE94969-3613-434A-834C-7358E4408240}</Project>
+      <Name>ProjetoModeloDDD.Infra.CrossCutting.IoC</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
