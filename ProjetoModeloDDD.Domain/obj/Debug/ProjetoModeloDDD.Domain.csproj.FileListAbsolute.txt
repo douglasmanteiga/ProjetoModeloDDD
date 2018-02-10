@@ -9,6 +9,5 @@ C:\Users\dmanteiga\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Domain\obj\Deb
 C:\Users\dmanteiga\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Domain\obj\Debug\ProjetoModeloDDD.Domain.pdb
 C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Domain\bin\Debug\ProjetoModeloDDD.Domain.dll
 C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Domain\bin\Debug\ProjetoModeloDDD.Domain.pdb
-C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Domain\obj\Debug\ProjetoModeloDDD.Domain.csprojResolveAssemblyReference.cache
 C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Domain\obj\Debug\ProjetoModeloDDD.Domain.dll
 C:\Users\Douglas\Source\Repos\ProjetoModeloDDD\ProjetoModeloDDD.Domain\obj\Debug\ProjetoModeloDDD.Domain.pdb
